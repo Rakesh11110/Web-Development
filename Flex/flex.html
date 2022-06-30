@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .flex-container{
+           display: flex;
+           border: 1px solid black;
+           /* justify-content: space-between; */
+           /* justify-content: flex-start;default */
+           /* justify-content: flex-end; */
+           /* justify-content: space-around;
+           100/6 */
+           /* justify-content: space-evenly; */
+            /* 100/4 */
+            justify-content: center;
+
+        }
+        /* 1. used in parent 
+        2. used in child */
+        /* justify content will distribute the available space  */
+        /* margin creates space justify distributes space  */
+        .flex-container>div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .flex-container>div:nth-child(2n){
+            background-color: teal;
+        }
+        .flex-container>div:nth-child(2n+1){
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
